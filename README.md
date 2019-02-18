@@ -23,7 +23,7 @@ Some example images for testing the pipeline on single frames are located in the
 
 ### 1. HOG Features Extraction
 
-The code for this step is contained in the code sections 1 - 3 of the IPython notebook "./carnd-vehicle-detection-project.ipynb" or "./carnd-vehicle-detection-project.html". 
+The code for this step is contained in the code sections 1 - 3 of the IPython notebook "[./carnd-vehicle-detection-project.ipynb](./carnd-vehicle-detection-project.ipynb)" or "[./carnd-vehicle-detection-project.html](./carnd-vehicle-detection-project.html)". 
 
 I started by reading in all the `vehicles` and `non-vehicles` images.  Here is an example of one of each of the `vehicles` and `non-vehicles` classes:
 
@@ -44,7 +44,7 @@ Here is an example using the `YUV` color space and HOG parameters of `orientatio
 
 ### 2. Feature Extraction Parameters
 
-I tried various combinations of parameters in the experiments trying to maximize the model accuracy and minimize the fitting time. In the end I used the following as the final parameters in the code sections 3 of the IPython notebook "./carnd-vehicle-detection-project.ipynb" or "./carnd-vehicle-detection-project.html":
+I tried various combinations of parameters in the experiments trying to maximize the model accuracy and minimize the fitting time. In the end I used the following as the final parameters in the code sections 3 of the IPython notebook "[./carnd-vehicle-detection-project.ipynb](./carnd-vehicle-detection-project.ipynb)" or "[./carnd-vehicle-detection-project.html](./carnd-vehicle-detection-project.html)":
 
 | Parameter           | Value          |
 | ------------------- | -------------- |
@@ -61,7 +61,7 @@ I tried various combinations of parameters in the experiments trying to maximize
 
 ### 3. Train the Classifier
 
-With the above parameters, it took a few seconds to train the classifier and the final accuracy was 98.73%. The related code is in code sections 6 - 8 of the IPython notebook "./carnd-vehicle-detection-project.ipynb" or "./carnd-vehicle-detection-project.html". Here is a report from the data preparation and classifier training:
+With the above parameters, it took a few seconds to train the classifier and the final accuracy was 98.73%. The related code is in code sections 6 - 8 of the IPython notebook "[./carnd-vehicle-detection-project.ipynb](./carnd-vehicle-detection-project.ipynb)" or "[./carnd-vehicle-detection-project.html](./carnd-vehicle-detection-project.html)". Here is a report from the data preparation and classifier training:
 
 ```
 Feature Extraction Report:
@@ -87,7 +87,7 @@ Here was my approaches to implement sliding windows search:
 * Apply the feature extraction to each one of windows to find the one that contains a car
 * Found the right scales and overlap parameter by experimenting
 
-The implementation is in code section 9 of the IPython notebook "./carnd-vehicle-detection-project.ipynb" or "./carnd-vehicle-detection-project.html".
+The implementation is in code section 9 of the IPython notebook "[./carnd-vehicle-detection-project.ipynb](./carnd-vehicle-detection-project.ipynb)" or "[./carnd-vehicle-detection-project.html](./carnd-vehicle-detection-project.html)".
 
 Ultimately I searched on a few scales using YUV 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  The following image is an example to show the result:
 
@@ -101,7 +101,7 @@ Ultimately I searched on a few scales using YUV 3-channel HOG features plus spat
 
 I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap.  I then assumed each blob corresponded to a vehicle. I constructed bounding boxes to cover the area of each blob detected.
 
-The implementation is in code sections 11 - 13 of the IPython notebook "./carnd-vehicle-detection-project.ipynb" or "./carnd-vehicle-detection-project.html".
+The implementation is in code sections 11 - 13 of the IPython notebook "[./carnd-vehicle-detection-project.ipynb](./carnd-vehicle-detection-project.ipynb)" or "[./carnd-vehicle-detection-project.html](./carnd-vehicle-detection-project.html)".
 
 Here's an example result showing the corresponding heatmaps of the six test images:
 
@@ -117,12 +117,12 @@ Here's an example result showing the corresponding heatmaps of the six test imag
 
 ![](output_images/heatmap6.png)
 
-Here is the output of the integrated heatmap and the resulting bounding boxes (implemented in code sections 11 and 14 of the IPython notebook "./carnd-vehicle-detection-project.ipynb" or "./carnd-vehicle-detection-project.html"):
+Here is the output of the integrated heatmap and the resulting bounding boxes (implemented in code sections 11 and 14 of the IPython notebook "[./carnd-vehicle-detection-project.ipynb](./carnd-vehicle-detection-project.ipynb)" or "[./carnd-vehicle-detection-project.html](./carnd-vehicle-detection-project.html)"):
 
 ![](output_images/integrated-heatmap.png)
 
 ### 2. Final Video Output
-Here is the final video output **"./project_video_output.mp4"**.
+Here is the final video output "[./project_video_output.mp4](./project_video_output.mp4)".
 
 ## Discussion
 
